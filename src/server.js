@@ -3,6 +3,8 @@ import pino from 'pino-http';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
+import { getEnvVar } from './utils/getEnvVar';
+
 // middleweres
 import notFountHandler from './middleweres/notFountHandler';
 import errorHandler from './middleweres/errorHandler';
@@ -10,7 +12,7 @@ import errorHandler from './middleweres/errorHandler';
 
 dotenv.config();
 
-const PORT = Number(process.env.PORT);
+const PORT = Number(getEnvVar('PORT', '3000'));
 
 export const server = () => {
 
