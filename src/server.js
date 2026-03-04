@@ -3,11 +3,11 @@ import pino from 'pino-http';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-import { getEnvVar } from './utils/getEnvVar';
+import { getEnvVar } from './utils/getEnvVar.js';
 
 // middleweres
-import notFountHandler from './middleweres/notFountHandler';
-import errorHandler from './middleweres/errorHandler';
+import {notFountHandler} from './middleweres/notFountHandler.js';
+import {errorHandler} from './middleweres/errorHandler.js';
 
 
 dotenv.config();
